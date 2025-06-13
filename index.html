@@ -18,138 +18,138 @@
 			}
 
 			body {
-				margin: 0px;
-				font-family: "Segoe UI", sans-serif;
-				background-color: #f0f4f8;
+				background: #f4f8fb;
+				min-height: 100vh;
+				padding: 32px 0px;
+				color: #222222;
 			}
 
 			.theme-preview {
-				padding: 64px 32px;
-				min-height: 100vh;
-				background-color: var(--bg);
+				width: 420px;
+				margin: 32px auto 48px auto;
+				background: var(--bg);
 				color: var(--text);
+				border-radius: 16px;
+				box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.08);
+				padding: 32px 32px 24px 32px;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 20px;
+				border: 2px solid var(--primary);
+				transition: box-shadow 0.3s;
+			}
+
+			.theme-preview:hover {
+				box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.16);
 			}
 
 			.header {
-				font-size: 16px;
-				letter-spacing: 2px;
-				text-transform: uppercase;
-				margin-bottom: 16px;
-				color: var(--secondary);
+				font-size: 24px;
+				font-weight: bold;
+				margin-bottom: 8px;
+				color: var(--primary);
+				letter-spacing: 1px;
 			}
 
 			.theme-title {
-				font-size: 40px;
-				font-weight: bold;
-				margin-bottom: 16px;
+				font-size: 18px;
+				font-weight: 600;
+				margin-bottom: 8px;
+				color: var(--secondary);
 			}
 
 			.theme-description {
-				font-size: 19px;
-				max-width: 700px;
-				margin-bottom: 40px;
+				font-size: 15px;
+				margin-bottom: 12px;
+				color: var(--text);
+				opacity: 0.92;
 			}
 
 			.buttons {
-				margin-bottom: 48px;
 				display: flex;
-				flex-wrap: wrap;
 				gap: 16px;
+				margin-bottom: 12px;
 			}
 
 			.button {
-				padding: 12px 32px;
-				margin: 0;
+				display: inline-block;
+				padding: 10px 28px;
+				border-radius: 8px;
+				font-size: 15px;
+				font-weight: 600;
+				text-decoration: none;
 				border: none;
-				border-radius: 6px;
 				cursor: pointer;
-				font-weight: bold;
-				font-size: 20px;
-				transition: all 0.3s ease;
-				color: #ffffff;
-				width: fit-content;
-				min-width: 160px;
+				transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+				box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
 			}
 
 			.btn-primary {
-				background-color: var(--primary);
-				color: #ffffff;
-				border: 1px solid rgba(255, 255, 255, 0.15);
+				background: var(--primary);
+				color: var(--text);
+				border: 1px solid var(--primary);
+			}
+
+			.btn-primary:hover {
+				background: var(--secondary);
+				color: var(--text);
 			}
 
 			.btn-accent {
-				background-color: var(--accent);
-				color: #000000;
+				background: var(--accent);
+				color: var(--primary);
+				border: 1px solid var(--accent);
 			}
 
-			.btn-primary:hover,
 			.btn-accent:hover {
-				opacity: 0.9;
-				transform: translateY(-2px);
-				box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+				background: var(--secondary);
+				color: var(--text);
 			}
 
 			.card {
-				background: rgba(255, 255, 255, 0.08);
-				border: 1px solid rgba(255, 255, 255, 0.2);
-				border-radius: 16px;
-				box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.15);
-				backdrop-filter: blur(12px);
-				-webkit-backdrop-filter: blur(12px);
-				max-width: 700px;
-				padding: 32px;
-				margin: auto;
+				background: rgba(255, 255, 255, 0.1);
+				border-radius: 10px;
+				padding: 20px 18px 16px 18px;
+				margin-top: 8px;
+				width: 100%;
+				box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.04);
 				color: inherit;
 			}
 
 			.card h3 {
-				margin-top: 0px;
-				color: inherit;
+				font-size: 16px;
+				font-weight: 600;
+				margin-bottom: 8px;
 			}
 
 			.card p {
-				color: inherit;
-				line-height: 1.6;
+				font-size: 14px;
+				line-height: 1.7;
 			}
 
-			@media (max-width: 768px) {
-				.theme-title {
-					font-size: 28px;
-				}
-
-				.theme-description {
-					font-size: 16px;
-				}
-
-				.card {
-					padding: 24px;
-				}
-			}
-
-			@media (max-width: 480px) {
-				.theme-title {
-					font-size: 22px;
-				}
-
-				.theme-description {
-					font-size: 14px;
-				}
-
-				.buttons {
-					flex-direction: column;
-					align-items: stretch;
+			@media (max-width: 600px) {
+				.theme-preview {
+					width: 98vw;
+					padding: 12px 2vw 10px 2vw;
+					margin: 18px auto 24px auto;
 					gap: 12px;
-					width: 100%;
 				}
-
+				.header {
+					font-size: 18px;
+				}
+				.theme-title {
+					font-size: 15px;
+				}
+				.theme-description {
+					font-size: 13px;
+				}
 				.button {
-					width: 100% !important;
-					flex: 1 1 100% !important;
-					font-size: 20px !important;
-					padding: 16px 24px !important;
-					min-width: 0 !important;
-					max-width: 100% !important;
-					box-sizing: border-box;
+					padding: 8px 16px;
+					font-size: 13px;
+				}
+				.card {
+					padding: 12px 8px 10px 8px;
 				}
 			}
 		</style>
@@ -157,12 +157,12 @@
 	<body>
 		<!-- Theme 1: Deep Ocean -->
 		<section class="theme-preview" style="--primary: #0a192f; --secondary: #0077b6; --accent: #00b4d8; --bg: #0a192f; --text: #f1fafb">
-			<div class="header">Welcome to Deep Ocean</div>
-			<div class="theme-title">Crafting Modern Interfaces for the Future</div>
+			<div class="header" style="color: #00b4d8">Welcome to Deep Ocean</div>
+			<div class="theme-title" style="color: #f1fafb">Crafting Modern Interfaces for the Future</div>
 			<p class="theme-description">Sleek and professional tones for tech products and creative portfolios.</p>
 			<div class="buttons">
-				<button class="button btn-primary">Get Started</button>
-				<button class="button btn-accent">Learn More</button>
+				<a href="#" class="button btn-primary">Get Started</a>
+				<a href="#" class="button btn-accent">Learn More</a>
 			</div>
 			<div class="card">
 				<h3>Deep Features</h3>
@@ -172,12 +172,12 @@
 
 		<!-- Theme 2: Midnight Coast -->
 		<section class="theme-preview" style="--primary: #001f3f; --secondary: #005f73; --accent: #94d2bd; --bg: #001f3f; --text: #e0fbfc">
-			<div class="header">Explore Midnight Coast</div>
-			<div class="theme-title">Elegant Design for Calm Interfaces</div>
+			<div class="header" style="color: #94d2bd">Explore Midnight Coast</div>
+			<div class="theme-title" style="color: #e0fbfc">Elegant Design for Calm Interfaces</div>
 			<p class="theme-description">A dark calm palette for fintech, portfolios, and lifestyle brands.</p>
 			<div class="buttons">
-				<button class="button btn-primary">Start Now</button>
-				<button class="button btn-accent">Docs</button>
+				<a href="#" class="button btn-primary">Start Now</a>
+				<a href="#" class="button btn-accent">Docs</a>
 			</div>
 			<div class="card">
 				<h3>Why Midnight?</h3>
@@ -187,12 +187,12 @@
 
 		<!-- Theme 3: Ice Blue Fresh -->
 		<section class="theme-preview" style="--primary: #0d3b66; --secondary: #3d5a80; --accent: #98c1d9; --bg: #e0fbfc; --text: #293241">
-			<div class="header">Introducing Ice Blue</div>
-			<div class="theme-title">Fresh, Bright and Clean</div>
+			<div class="header" style="color: #0d3b66">Introducing Ice Blue</div>
+			<div class="theme-title" style="color: #3d5a80">Fresh, Bright and Clean</div>
 			<p class="theme-description">Ideal for landing pages, startups, and education websites.</p>
 			<div class="buttons">
-				<button class="button btn-primary">Join Today</button>
-				<button class="button btn-accent">Preview</button>
+				<a href="#" class="button btn-primary">Join Today</a>
+				<a href="#" class="button btn-accent">Preview</a>
 			</div>
 			<div class="card" style="background: rgba(0, 0, 0, 0.05); color: #293241">
 				<h3>Why It Works</h3>
@@ -202,12 +202,12 @@
 
 		<!-- Theme 4: Nautical Blue -->
 		<section class="theme-preview" style="--primary: #002244; --secondary: #005792; --accent: #fdcb6e; --bg: #f5f5f5; --text: #1c1c1c">
-			<div class="header">Welcome to Nautical</div>
-			<div class="theme-title">Inspired by the Sea and Sky</div>
+			<div class="header" style="color: #005792">Welcome to Nautical</div>
+			<div class="theme-title" style="color: #002244">Inspired by the Sea and Sky</div>
 			<p class="theme-description">A crisp combo of blue and gold for balance, creativity, and trust.</p>
 			<div class="buttons">
-				<button class="button btn-primary">Try for Free</button>
-				<button class="button btn-accent">Subscribe</button>
+				<a href="#" class="button btn-primary">Try for Free</a>
+				<a href="#" class="button btn-accent">Subscribe</a>
 			</div>
 			<div class="card" style="background: rgba(0, 0, 0, 0.05); color: #1c1c1c">
 				<h3>Nautical Strengths</h3>
@@ -217,12 +217,12 @@
 
 		<!-- Theme 5: Arctic Storm -->
 		<section class="theme-preview" style="--primary: #1b263b; --secondary: #415a77; --accent: #778da9; --bg: #1b263b; --text: #e0e1dd">
-			<div class="header">Arctic Storm is Here</div>
-			<div class="theme-title">Muted Colors, Bold Impact</div>
+			<div class="header" style="color: #778da9">Arctic Storm is Here</div>
+			<div class="theme-title" style="color: #e0e1dd">Muted Colors, Bold Impact</div>
 			<p class="theme-description">Perfect for serious brands and minimalist design lovers.</p>
 			<div class="buttons">
-				<button class="button btn-primary">Launch</button>
-				<button class="button btn-accent">Details</button>
+				<a href="#" class="button btn-primary">Launch</a>
+				<a href="#" class="button btn-accent">Details</a>
 			</div>
 			<div class="card">
 				<h3>Core Elements</h3>
@@ -232,12 +232,12 @@
 
 		<!-- Theme 6: Black Ice -->
 		<section class="theme-preview" style="--primary: #000000; --secondary: #0077b6; --accent: #00bfff; --bg: #121212; --text: #ffffff">
-			<div class="header">Introducing Black Ice</div>
-			<div class="theme-title">Futuristic and Fearless</div>
+			<div class="header" style="color: #00bfff">Introducing Black Ice</div>
+			<div class="theme-title" style="color: #ffffff">Futuristic and Fearless</div>
 			<p class="theme-description">Bold contrast for cutting-edge apps, crypto, or gaming UIs.</p>
 			<div class="buttons">
-				<button class="button btn-primary">Download</button>
-				<button class="button btn-accent">Join Beta</button>
+				<a href="#" class="button btn-primary">Download</a>
+				<a href="#" class="button btn-accent">Join Beta</a>
 			</div>
 			<div class="card">
 				<h3>What’s Inside</h3>
