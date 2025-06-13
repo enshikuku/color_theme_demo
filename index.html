@@ -10,95 +10,100 @@
         }
 
         * {
-            padding: 0;
-            margin: 0;
+            padding: 0px;
+            margin: 0px;
             box-sizing: border-box;
             scroll-behavior: smooth;
             font-family: "Century Gothic", sans-serif;
         }
 
         body {
-            margin: 0;
+            margin: 0px;
             font-family: 'Segoe UI', sans-serif;
             background-color: #f0f4f8;
         }
 
         .theme-preview {
-            padding: 4rem 2rem;
+            padding: 64px 32px;
             min-height: 100vh;
             background-color: var(--bg);
             color: var(--text);
         }
 
         .header {
-            font-size: 1rem;
+            font-size: 16px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 1rem;
+            margin-bottom: 16px;
             color: var(--secondary);
         }
 
         .theme-title {
-            font-size: 2.5rem;
+            font-size: 40px;
             font-weight: bold;
-            margin-bottom: 1rem;
+            margin-bottom: 16px;
         }
 
         .theme-description {
-            font-size: 1.2rem;
+            font-size: 19px;
             max-width: 700px;
-            margin-bottom: 2.5rem;
+            margin-bottom: 40px;
         }
 
         .buttons {
-            margin-bottom: 3rem;
+            margin-bottom: 48px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
         }
 
         .button {
-            padding: 0.75rem 2rem;
-            margin: 0 0.5rem;
+            padding: 12px 32px;
+            margin: 0;
             border: none;
             border-radius: 6px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 20px;
             transition: all 0.3s ease;
-            color: #fff;
+            color: #ffffff;
+            width: fit-content;
+            min-width: 160px;
         }
 
         .btn-primary {
             background-color: var(--primary);
-            color: #fff;
+            color: #ffffff;
             border: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         .btn-accent {
             background-color: var(--accent);
-            color: #000;
+            color: #000000;
         }
 
         .btn-primary:hover,
         .btn-accent:hover {
             opacity: 0.9;
             transform: translateY(-2px);
-            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
         }
 
         .card {
             background: rgba(255, 255, 255, 0.08);
             border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.15);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             max-width: 700px;
-            padding: 2rem;
+            padding: 32px;
             margin: auto;
             color: inherit;
         }
 
         .card h3 {
-            margin-top: 0;
+            margin-top: 0px;
             color: inherit;
         }
 
@@ -106,17 +111,50 @@
             color: inherit;
             line-height: 1.6;
         }
+
+        @media (max-width: 768px) {
+            .theme-title {
+                font-size: 28px;
+            }
+
+            .theme-description {
+                font-size: 16px;
+            }
+
+            .card {
+                padding: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .theme-title {
+                font-size: 22px;
+            }
+
+            .theme-description {
+                font-size: 14px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+
+            .button {
+                width: 100% !important;
+                font-size: 20px !important;
+                padding: 16px 24px !important;
+                min-width: unset !important;
+            }
+        }
+
     </style>
 </head>
 <body>
 
     <!-- Theme 1: Deep Ocean -->
-    <section class="theme-preview" style="
-        --primary: #0A192F;
-        --secondary: #0077B6;
-        --accent: #00B4D8;
-        --bg: #0A192F;
-        --text: #F1FAFB;">
+    <section class="theme-preview" style="--primary: #0A192F; --secondary: #0077B6; --accent: #00B4D8; --bg: #0A192F; --text: #F1FAFB;">
         <div class="header">Welcome to Deep Ocean</div>
         <div class="theme-title">Crafting Modern Interfaces for the Future</div>
         <p class="theme-description">Sleek and professional tones for tech products and creative portfolios.</p>
@@ -131,12 +169,7 @@
     </section>
 
     <!-- Theme 2: Midnight Coast -->
-    <section class="theme-preview" style="
-        --primary: #001F3F;
-        --secondary: #005F73;
-        --accent: #94D2BD;
-        --bg: #001F3F;
-        --text: #E0FBFC;">
+    <section class="theme-preview" style="--primary: #001F3F; --secondary: #005F73; --accent: #94D2BD; --bg: #001F3F; --text: #E0FBFC;">
         <div class="header">Explore Midnight Coast</div>
         <div class="theme-title">Elegant Design for Calm Interfaces</div>
         <p class="theme-description">A dark calm palette for fintech, portfolios, and lifestyle brands.</p>
@@ -151,12 +184,7 @@
     </section>
 
     <!-- Theme 3: Ice Blue Fresh -->
-    <section class="theme-preview" style="
-        --primary: #0D3B66;
-        --secondary: #3D5A80;
-        --accent: #98C1D9;
-        --bg: #E0FBFC;
-        --text: #293241;">
+    <section class="theme-preview" style="--primary: #0D3B66; --secondary: #3D5A80; --accent: #98C1D9; --bg: #E0FBFC; --text: #293241;">
         <div class="header">Introducing Ice Blue</div>
         <div class="theme-title">Fresh, Bright and Clean</div>
         <p class="theme-description">Ideal for landing pages, startups, and education websites.</p>
@@ -171,12 +199,7 @@
     </section>
 
     <!-- Theme 4: Nautical Blue -->
-    <section class="theme-preview" style="
-        --primary: #002244;
-        --secondary: #005792;
-        --accent: #FDCB6E;
-        --bg: #F5F5F5;
-        --text: #1C1C1C;">
+    <section class="theme-preview" style="--primary: #002244; --secondary: #005792; --accent: #FDCB6E; --bg: #F5F5F5; --text: #1C1C1C;">
         <div class="header">Welcome to Nautical</div>
         <div class="theme-title">Inspired by the Sea and Sky</div>
         <p class="theme-description">A crisp combo of blue and gold for balance, creativity, and trust.</p>
@@ -191,12 +214,7 @@
     </section>
 
     <!-- Theme 5: Arctic Storm -->
-    <section class="theme-preview" style="
-        --primary: #1B263B;
-        --secondary: #415A77;
-        --accent: #778DA9;
-        --bg: #1B263B;
-        --text: #E0E1DD;">
+    <section class="theme-preview" style="--primary: #1B263B; --secondary: #415A77; --accent: #778DA9; --bg: #1B263B; --text: #E0E1DD;">
         <div class="header">Arctic Storm is Here</div>
         <div class="theme-title">Muted Colors, Bold Impact</div>
         <p class="theme-description">Perfect for serious brands and minimalist design lovers.</p>
@@ -211,12 +229,7 @@
     </section>
 
     <!-- Theme 6: Black Ice -->
-    <section class="theme-preview" style="
-        --primary: #000000;
-        --secondary: #0077B6;
-        --accent: #00BFFF;
-        --bg: #121212;
-        --text: #FFFFFF;">
+    <section class="theme-preview" style="--primary: #000000; --secondary: #0077B6; --accent: #00BFFF; --bg: #121212; --text: #FFFFFF;">
         <div class="header">Introducing Black Ice</div>
         <div class="theme-title">Futuristic and Fearless</div>
         <p class="theme-description">Bold contrast for cutting-edge apps, crypto, or gaming UIs.</p>
